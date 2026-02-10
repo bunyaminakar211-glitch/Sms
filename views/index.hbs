@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SMS Gönderici</title>
+  <link rel="stylesheet" href="/css/style.css"> <!-- varsa -->
+</head>
+<body>
+  <div class="container">
+    <h1>Node.js SMS Gönderici</h1>
+
+    {{#if success}}
+      <p class="success">{{success}}</p>
+      <p>Message ID: {{messageId}}</p>
+    {{/if}}
+
+    {{#if error}}
+      <p class="error">{{error}}</p>
+    {{/if}}
+
+    <form action="/send-sms" method="POST">
+      <label>Telefon Numarası (ör: 905xxxxxxxxx):</label>
+      <input type="text" name="number" required placeholder="905xxxxxxxxx">
+
+      <label>Mesaj:</label>
+      <textarea name="msg" required rows="4" placeholder="Mesajınızı yazın..."></textarea>
+
+      <button type="submit">SMS Gönder</button>
+    </form>
+  </div>
+</body>
+</html>
