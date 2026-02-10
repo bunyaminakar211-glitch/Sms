@@ -1,0 +1,14 @@
+{
+  "name": "sms-sender",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "body-parser": "^1.19.0",
+    "nexmo": "^2.9.0",
+    "hbs": "^4.1.1"
+  }
+}
